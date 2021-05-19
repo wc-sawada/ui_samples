@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ボタンテスト</title>
+</head>
+<body>
+  <div class="wrap">
+    <p>矢印動かす １</p>
+    <button type="button" class="radiusButton anime1">
+      <span>無料査定スタート</span>
+    </button>
+    <p>矢印動かす 2</p>
+    <button type="button" class="radiusButton anime2">
+      <span>無料査定スタート</span>
+    </button>
+    <p>矢印動かす 3</p>
+    <button type="button" class="radiusButton anime3">
+      <span>無料査定スタート</span>
+    </button>
+    <p>キラキラ</p>
+    <button type="button" class="radiusButton anime4">
+      <span>無料査定スタート</span>
+    </button>
+  </div>
+</body>
+<style>
+.wrap {
+  width: 300px;
+  margin: auto;
+  padding: 100px 0;
+}
+p {
+  font-weight: bold;
+}
+.radiusButton {
+  width:260px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 260px;
+  margin: 20px auto 50px;
+  display: block;
+  background: #ffd400;
+  background: linear-gradient(
+90deg
+, #ffd400 0%, #ffe124 50%, #ffec43 100%);
+  padding: 16px .5em 15px;
+  border-radius: 50px;
+  box-shadow: 0 6px 3px -3px #dfe0e1;
+  position: relative;
+}
+.radiusButton span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #283034;
+  text-shadow: 1px 1.5px 0 #ffc100;
+  letter-spacing: .5px;
+}
+.radiusButton span:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 18px;
+  width: 18px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAh1BMVEVHcEz///////7/////////////////////////////////////////////////////////////////////////////////////////////1AD/////64f/1xD/8av/+t//7I3/987/3DH/5WL/4lH/9L//53P//O///fb/++b/30D/6oT/7ZVr6aaLAAAAGnRSTlMALf4IZ/MUuQTZZA/C8qY3fHjjzUhrJI5alsyOCeAAAACaSURBVBgZTcEFEsJAEATAiQvE0Z1LcOf/7+P2CFS64cR5OZ+XeYyftI7oRHUKZ5bwL5lBJZxIYG1o+fzJAWS09tcbvzLAozLSv306HkIqIyLHC1WIhsqIOu9INlhSGbH6153kEgsqIyKnB9UCQUTLyPNAJwqANa1h4GgLIG450cawqoJ/RQXHyzjKPIzSsPNJvwtTTASrVYCvD0b+F69OHBqxAAAAAElFTkSuQmCC) no-repeat;
+  background-size: 100%;
+  /*transition: all .2s; */
+  position: relative;
+  top: -.1em;
+}
+.anime1 span:before {
+  animation: button_animation_1 1s ease 0s infinite normal;
+}
+@keyframes button_animation_1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(6px);
+  }
+}
+.anime2 span:before {
+  animation: button_animation_2 1s ease 0s infinite normal;
+}
+@keyframes button_animation_2 {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: -.3em;
+  }
+  100% {
+    right: 0;
+  }
+}
+.anime3 span:before {
+  animation: button_animation_3 1s ease 0s infinite normal;
+}
+@keyframes button_animation_3 {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  50% {
+    right: -.3em;
+  }
+  100% {
+    right: 0;
+    opacity: 0;
+  }
+}
+.anime4:before {
+  content: "";
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+  animation: button_animation_4 1.3s ease-in-out 0s infinite normal;
+}
+@keyframes button_animation_4 {
+  0% {
+    transform: skewX(-45deg) translateX(0);
+  }
+  80% {
+    transform: skewX(-45deg) translateX(18em);
+  }
+  100% {
+    transform: skewX(-45deg) translateX(18em);
+  }
+}
+/* Box sizing rules */
+/* Box sizingの定義 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* デフォルトのpaddingを削除 */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+/* デフォルトのmarginを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* bodyのデフォルトを定義 */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* classを持たない要素はデフォルトのスタイルを取得 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* img要素の扱いを簡単にする */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* article要素内の要素に自然な流れとリズムを定義 */
+/*
+article > * + * {
+  margin-top: 1em;
+}
+*/
+/* Inherit fonts for inputs and buttons */
+/* inputやbuttonなどのフォントは継承を定義 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
+/*
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}*/
+</style>
+</html>
